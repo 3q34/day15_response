@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>注册</title>
+    <script  >
+        window.onload=function () {
+
+            var im=   document.getElementById("img1");
+            im.onclick=function () {
+                var dt=new Date().getTime();
+                im.src="/day15/checkCodeServlet?"+dt;
+            }
+            var aa=document.getElementById("a1");
+            aa.onclick=function () {
+                im.src="/day15/checkCodeServlet?"+dt;
+            }
+        }
+
+
+    </script>
+</head>
+<body>
+<form>
+   请输入验证码： <input type="text">
+    <img id="img1" src="/day15/checkCodeServlet">
+    <a id="a1" href="">看不清换一张</a>
+</form>
+</body>
+</html>
